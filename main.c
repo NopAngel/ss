@@ -1,3 +1,13 @@
+//
+//   main.ss - main file (IMPORTANT) 
+//
+//
+// this is a main file (/main.c), important file.
+//
+//  license:Apache-2.0    |      author: NopAngel
+//
+
+
 #include <stdio.h>
 #include <string.h>
 #include "include/main.h"
@@ -10,6 +20,10 @@
 #include "include/remote.h"
 #include "include/head.h"
 #include "include/end.h"
+#include "include/colors.h"
+#include "include/help.h"
+
+
 
 int main(int argc, char *argv[]) {
     if (argc < 2) {
@@ -18,6 +32,12 @@ int main(int argc, char *argv[]) {
     }
 
     if (strcmp(argv[1], "init") == 0) {
+        //
+        // inited func
+        //
+        // ---------------
+        // created folder ".ss", root for ss :D
+        //
         init_repo();
     } else if (strcmp(argv[1], "add") == 0 && argc == 3) {
         add_file(argv[2]);
